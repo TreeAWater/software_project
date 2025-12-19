@@ -1,0 +1,180 @@
+<mxfile host="app.diagrams.net" modified="2023-10-26T00:00:00.000Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="W_XyZ12345" version="21.7.5" type="device">
+  <diagram id="ERDiagram" name="ER Diagram">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Entities -->
+        <mxCell id="2" value="User" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#808080;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="3" value="Project" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#606060;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="4" value="ProjectMember" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#707070;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="5" value="Role" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#707070;" vertex="1" parent="1">
+          <mxGeometry x="240" y="100" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="6" value="UserStory" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#505050;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="7" value="Task" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#505050;" vertex="1" parent="1">
+          <mxGeometry x="400" y="440" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="8" value="Sprint" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#505050;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="9" value="Issue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#404040;" vertex="1" parent="1">
+          <mxGeometry x="560" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="10" value="WikiPage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d8d8d8;strokeColor=#686868;" vertex="1" parent="1">
+          <mxGeometry x="560" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="11" value="Notification" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <!-- User - ProjectMember -->
+        <mxCell id="12" value="1" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="12">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Project - ProjectMember -->
+        <mxCell id="14" value="1" style="endArrow=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="14">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ProjectMember - Role -->
+        <mxCell id="16" value="*" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="16">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Project - UserStory -->
+        <mxCell id="18" value="1" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="18">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- UserStory - Task -->
+        <mxCell id="20" value="1" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="20">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Project - Sprint -->
+        <mxCell id="22" value="1" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="22">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Project - Issue -->
+        <mxCell id="24" value="1" style="endArrow=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="24">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Project - WikiPage -->
+        <mxCell id="26" value="1" style="endArrow=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="26">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- WikiPage - WikiPage (Parent) -->
+        <mxCell id="28" value="1" style="endArrow=none;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="10" target="10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="60" as="sourcePoint" />
+            <mxPoint x="700" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="40" />
+              <mxPoint x="720" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="28">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- User - UserStory (Creator) -->
+        <mxCell id="30" value="1" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="30">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- User - Task (Assignee) -->
+        <mxCell id="32" value="1" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="32">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- User - Notification -->
+        <mxCell id="34" value="1" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="34">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+             <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,49 @@
+<mxfile host="65bd71144e">
+    <diagram id="ArchitectureDiagram" name="System Architecture">
+        <mxGraphModel dx="255" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Client (Browser)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#606060;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Web Server&#10;(Nginx / Apache)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#808080;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Backend API&#10;(Django / SpringBoot)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#505050;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Database&#10;(PostgreSQL / MySQL)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#b0b0b0;strokeColor=#404040;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="440" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="External Services&#10;(GitLab, Slack, LDAP)" style="cloud;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#707070;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="300" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="HTTPS" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="160" as="sourcePoint"/>
+                        <mxPoint x="400" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Reverse Proxy" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="280" as="sourcePoint"/>
+                        <mxPoint x="400" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="SQL" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="400" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="REST API" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.16;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="350" as="sourcePoint"/>
+                        <mxPoint x="550" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

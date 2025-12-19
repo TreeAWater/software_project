@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" modified="2023-10-26T00:00:00.000Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="W_XyZ12345" version="21.7.5" type="device">
+  <diagram id="DomainModel" name="Domain Model">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Entities -->
+        <mxCell id="2" value="Project" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#606060;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="3" value="User" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#808080;" vertex="1" parent="1">
+          <mxGeometry x="120" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="4" value="Epic" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#505050;" vertex="1" parent="1">
+          <mxGeometry x="360" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="5" value="User Story" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#505050;" vertex="1" parent="1">
+          <mxGeometry x="360" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="6" value="Task" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#505050;" vertex="1" parent="1">
+          <mxGeometry x="360" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="7" value="Sprint" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#707070;" vertex="1" parent="1">
+          <mxGeometry x="600" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="8" value="Issue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#404040;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="9" value="Wiki Page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d8d8d8;strokeColor=#686868;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="10" value="Member of" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="11" value="Contains" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="12" value="Contains" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="13" value="Contains" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="14" value="Assigned to" style="endArrow=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="15" value="Belongs to" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+             <mxPoint x="600" y="190" as="sourcePoint" />
+             <mxPoint x="480" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="16" value="Belongs to" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
