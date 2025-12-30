@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Sprint规划与燃尽图流程" id="sprint_flow">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 开始 -->
+        <mxCell id="start" value="开始Sprint规划" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="180" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <!-- 创建Sprint -->
+        <mxCell id="create" value="创建Sprint&#xa;设置起止日期" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="180" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="start" target="create" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 选择用户故事 -->
+        <mxCell id="select" value="从Backlog选择&#xa;用户故事" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="320" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="create" target="select" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 拖入Sprint -->
+        <mxCell id="drag" value="拖入Sprint&#xa;update_userstories_milestone_in_bulk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="460" y="170" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="select" target="drag" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 任务分解 -->
+        <mxCell id="tasks" value="分解任务&#xa;(Task)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="620" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="drag" target="tasks" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 执行Sprint -->
+        <mxCell id="exec" value="执行Sprint&#xa;每日更新任务状态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="760" y="170" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="tasks" target="exec" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 燃尽图更新 -->
+        <mxCell id="burndown" value="自动计算&#xa;燃尽图数据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="760" y="280" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="每日触发" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="exec" target="burndown" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 判断完成 -->
+        <mxCell id="check" value="所有故事&#xa;完成?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="920" y="160" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="exec" target="check" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 关闭Sprint -->
+        <mxCell id="close" value="关闭Sprint&#xa;close_milestone()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#404040;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="175" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="是" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="check" target="close" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 继续执行 -->
+        <mxCell id="e9" value="否" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="check" target="exec" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="100"/>
+              <mxPoint x="820" y="100"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 结束 -->
+        <mxCell id="end" value="Sprint回顾" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="280" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="close" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Kanban任务卡片流转流程" id="kanban_flow">
+    <mxGraphModel dx="1200" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="600">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 看板列 -->
+        <mxCell id="col1" value="待办&#xa;(To Do)" style="swimlane;horizontal=0;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="200" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="card1" value="用户故事 A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="col1" vertex="1">
+          <mxGeometry x="30" y="40" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="card2" value="用户故事 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="col1" vertex="1">
+          <mxGeometry x="30" y="100" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="col2" value="进行中&#xa;(In Progress)" style="swimlane;horizontal=0;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="280" y="40" width="200" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="card3" value="用户故事 C" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="col2" vertex="1">
+          <mxGeometry x="30" y="40" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="wip" value="WIP 限制: 3" style="text;strokeColor=#666666;fillColor=#f0f0f0;align=center;" parent="col2" vertex="1">
+          <mxGeometry x="40" y="260" width="120" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="col3" value="测试中&#xa;(Testing)" style="swimlane;horizontal=0;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="520" y="40" width="200" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="col4" value="已完成&#xa;(Done)" style="swimlane;horizontal=0;fillColor=#909090;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="760" y="40" width="200" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="card4" value="用户故事 D" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#666666;fontColor=#ffffff;" parent="col4" vertex="1">
+          <mxGeometry x="30" y="40" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <!-- 拖拽箭头 -->
+        <mxCell id="drag1" value="拖拽" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#404040;strokeWidth=2;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="80" as="sourcePoint"/>
+            <mxPoint x="310" y="80" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="drag2" value="拖拽" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#404040;strokeWidth=2;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="80" as="sourcePoint"/>
+            <mxPoint x="550" y="80" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="drag3" value="拖拽" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#404040;strokeWidth=2;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="80" as="sourcePoint"/>
+            <mxPoint x="790" y="80" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- 泳道标签 -->
+        <mxCell id="swimlane_label" value="Swimlane: 前端开发" style="text;strokeColor=#666666;fillColor=#e0e0e0;align=center;" parent="1" vertex="1">
+          <mxGeometry x="40" y="360" width="920" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

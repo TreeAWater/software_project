@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="顶层数据流图" id="context_dfd">
+    <mxGraphModel dx="900" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="600">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 外部实体 -->
+        <mxCell id="user" value="用户&#xa;(User)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="100" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin" value="管理员&#xa;(Admin)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="250" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="external" value="外部系统&#xa;(GitHub/Jira等)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="400" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <!-- 中心系统 -->
+        <mxCell id="system" value="Taiga&#xa;敏捷项目管理系统" style="ellipse;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#404040;fontColor=#ffffff;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="200" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <!-- 数据存储 -->
+        <mxCell id="db" value="项目数据库" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="720" y="220" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <!-- 数据流 -->
+        <mxCell id="f1" value="登录/注册请求" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="user" target="system" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2" value="项目/任务操作" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="user" target="system" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="160" as="sourcePoint"/>
+            <Array as="points"><mxPoint x="240" y="160"/><mxPoint x="240" y="240"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f3" value="系统响应/通知" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="system" target="user" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="280" y="260"/><mxPoint x="280" y="100"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4" value="系统配置" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="admin" target="system" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f5" value="Webhook事件" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="external" target="system" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f6" value="数据读写" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="system" target="db" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="看板泳道状态E-R图" id="kanban_er">
+    <mxGraphModel dx="900" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="600">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- UserStory -->
+        <mxCell id="userstory" value="UserStory" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="80" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <!-- Swimlane -->
+        <mxCell id="swimlane" value="Swimlane&#xa;泳道" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="swimlane_attr" value="id (PK)&#xa;name&#xa;order&#xa;project_id (FK)" style="text;align=left;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="120" y="270" width="120" height="70" as="geometry"/>
+        </mxCell>
+        <!-- Status -->
+        <mxCell id="status" value="UserStoryStatus&#xa;状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="status_attr" value="id (PK)&#xa;name, color&#xa;order&#xa;is_closed&#xa;wip_limit" style="text;align=left;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="360" y="270" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <!-- SwimlaneUserStoryStatus -->
+        <mxCell id="sus" value="SwimlaneUser&#xa;StoryStatus&#xa;(泳道-状态配置)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="600" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="sus_attr" value="id (PK)&#xa;wip_limit&#xa;swimlane_id (FK)&#xa;status_id (FK)" style="text;align=left;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="600" y="270" width="120" height="70" as="geometry"/>
+        </mxCell>
+        <!-- Project -->
+        <mxCell id="project" value="Project" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="400" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <!-- 关系连线 -->
+        <mxCell id="r1" value="属于" style="strokeColor=#666666;endArrow=none;" parent="1" source="userstory" target="status" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" value="位于" style="strokeColor=#666666;endArrow=none;" parent="1" source="userstory" target="swimlane" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" style="strokeColor=#666666;endArrow=none;" parent="1" source="swimlane" target="project" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4" style="strokeColor=#666666;endArrow=none;" parent="1" source="status" target="project" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5" style="strokeColor=#666666;endArrow=none;" parent="1" source="swimlane" target="sus" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r6" style="strokeColor=#666666;endArrow=none;" parent="1" source="status" target="sus" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="用户故事生命周期流程" id="us_lifecycle">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="500">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 开始 -->
+        <mxCell id="start" value="创建用户故事" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="20" y="180" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <!-- New状态 -->
+        <mxCell id="new" value="New&#xa;(新建)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="160" y="170" width="80" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="start" target="new" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Backlog -->
+        <mxCell id="backlog" value="Backlog&#xa;(待办列表)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="280" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="排序" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="new" target="backlog" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 分配到Sprint -->
+        <mxCell id="sprint" value="Sprint&#xa;(规划到冲刺)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="420" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="分配" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="backlog" target="sprint" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- In Progress -->
+        <mxCell id="progress" value="In Progress&#xa;(进行中)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="560" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="开始" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="sprint" target="progress" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Ready for Test -->
+        <mxCell id="test" value="Ready for Test&#xa;(待测试)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="700" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="progress" target="test" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Done -->
+        <mxCell id="done" value="Done&#xa;(已完成)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#909090;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="840" y="170" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="完成" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="test" target="done" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 结束 -->
+        <mxCell id="end" value="归档" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="980" y="180" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="done" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Kanban 分支 -->
+        <mxCell id="kanban" value="Kanban模式&#xa;(泳道流转)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8d8d8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="420" y="300" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="Kanban" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="backlog" target="kanban" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="kanban" target="done" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="380"/>
+              <mxPoint x="890" y="380"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 阻塞状态 -->
+        <mxCell id="blocked" value="Blocked&#xa;(阻塞)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#707070;strokeColor=#404040;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="560" y="60" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" value="阻塞" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="progress" target="blocked" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" value="解除" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="blocked" target="progress" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="85"/>
+              <mxPoint x="660" y="130"/>
+              <mxPoint x="610" y="130"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

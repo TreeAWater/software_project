@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="功能层次图" id="function_hierarchy">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 顶层 -->
+        <mxCell id="root" value="Taiga 敏捷项目管理系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#404040;fontColor=#ffffff;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="40" width="200" height="40" as="geometry"/>
+        </mxCell>
+        <!-- 一级模块 -->
+        <mxCell id="m1" value="用户认证" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="m2" value="项目管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="200" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="m3" value="敏捷管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="340" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="m4" value="问题追踪" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="480" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="m5" value="知识库" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="620" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="m6" value="统计报表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="760" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="m7" value="系统集成" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="900" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <!-- 连线 -->
+        <mxCell id="c1" style="strokeColor=#666666;endArrow=none;" parent="1" source="root" target="m1" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c2" style="strokeColor=#666666;endArrow=none;" parent="1" source="root" target="m2" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c3" style="strokeColor=#666666;endArrow=none;" parent="1" source="root" target="m3" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c4" style="strokeColor=#666666;endArrow=none;" parent="1" source="root" target="m4" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c5" style="strokeColor=#666666;endArrow=none;" parent="1" source="root" target="m5" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c6" style="strokeColor=#666666;endArrow=none;" parent="1" source="root" target="m6" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c7" style="strokeColor=#666666;endArrow=none;" parent="1" source="root" target="m7" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 二级 - 用户认证 -->
+        <mxCell id="s11" value="用户注册" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="20" y="240" width="80" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s12" value="用户登录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="110" y="240" width="80" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c11" style="strokeColor=#666666;endArrow=none;" parent="1" source="m1" target="s11" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c12" style="strokeColor=#666666;endArrow=none;" parent="1" source="m1" target="s12" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 二级 - 项目管理 -->
+        <mxCell id="s21" value="创建项目" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="170" y="240" width="70" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s22" value="成员管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="250" y="240" width="70" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c21" style="strokeColor=#666666;endArrow=none;" parent="1" source="m2" target="s21" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c22" style="strokeColor=#666666;endArrow=none;" parent="1" source="m2" target="s22" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 二级 - 敏捷管理 -->
+        <mxCell id="s31" value="Backlog" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="310" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s32" value="Sprint" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="380" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s33" value="Kanban" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="450" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c31" style="strokeColor=#666666;endArrow=none;" parent="1" source="m3" target="s31" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c32" style="strokeColor=#666666;endArrow=none;" parent="1" source="m3" target="s32" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c33" style="strokeColor=#666666;endArrow=none;" parent="1" source="m3" target="s33" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 三级 - Backlog -->
+        <mxCell id="t31" value="故事创建" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="270" y="320" width="60" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="t32" value="故事排序" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="340" y="320" width="60" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="ct31" style="strokeColor=#666666;endArrow=none;" parent="1" source="s31" target="t31" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ct32" style="strokeColor=#666666;endArrow=none;" parent="1" source="s31" target="t32" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 三级 - Sprint -->
+        <mxCell id="t33" value="创建冲刺" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="410" y="320" width="60" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="t34" value="任务分解" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="480" y="320" width="60" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="ct33" style="strokeColor=#666666;endArrow=none;" parent="1" source="s32" target="t33" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ct34" style="strokeColor=#666666;endArrow=none;" parent="1" source="s32" target="t34" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 二级 - 问题追踪 -->
+        <mxCell id="s41" value="问题创建" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="530" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s42" value="问题处理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="600" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c41" style="strokeColor=#666666;endArrow=none;" parent="1" source="m4" target="s41" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c42" style="strokeColor=#666666;endArrow=none;" parent="1" source="m4" target="s42" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 二级 - 知识库 -->
+        <mxCell id="s51" value="Wiki编辑" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="670" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s52" value="版本管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="740" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c51" style="strokeColor=#666666;endArrow=none;" parent="1" source="m5" target="s51" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c52" style="strokeColor=#666666;endArrow=none;" parent="1" source="m5" target="s52" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 二级 - 统计 -->
+        <mxCell id="s61" value="燃尽图" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="810" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s62" value="速度图" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="880" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c61" style="strokeColor=#666666;endArrow=none;" parent="1" source="m6" target="s61" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c62" style="strokeColor=#666666;endArrow=none;" parent="1" source="m6" target="s62" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 二级 - 集成 -->
+        <mxCell id="s71" value="Webhook" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="950" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s72" value="数据导入" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="1020" y="240" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c71" style="strokeColor=#666666;endArrow=none;" parent="1" source="m7" target="s71" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c72" style="strokeColor=#666666;endArrow=none;" parent="1" source="m7" target="s72" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

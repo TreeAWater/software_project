@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="问题追踪与处理流程" id="issue_flow">
+    <mxGraphModel dx="1100" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="500">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="start" value="发现问题" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="150" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="create" value="创建Issue&#xa;(类型/优先级/严重程度)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="160" y="135" width="120" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="start" target="create" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="new" value="New&#xa;(新建)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="320" y="145" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="create" target="new" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="assign" value="分配处理人" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="440" y="145" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="new" target="assign" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="progress" value="In Progress&#xa;(处理中)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="580" y="145" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="assign" target="progress" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="resolved" value="Resolved&#xa;(已解决)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="720" y="145" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="progress" target="resolved" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="closed" value="Closed&#xa;(已关闭)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#404040;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="860" y="145" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="resolved" target="closed" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="end" value="结束" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="150" width="60" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="closed" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 重新打开 -->
+        <mxCell id="reopen" value="重新打开" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="resolved" target="progress" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="260"/>
+              <mxPoint x="630" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 附件/评论 -->
+        <mxCell id="attach" value="添加附件/评论" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="580" y="50" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="progress" target="attach" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

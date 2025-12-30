@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="史诗跨版本规划流程" id="epic_flow">
+    <mxGraphModel dx="1100" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="500">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Epic 容器 -->
+        <mxCell id="epic_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="200" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="epic_title" value="Epic: 用户认证系统" style="text;html=1;strokeColor=none;fillColor=#d0d0d0;align=center;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="180" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="epic_color" value="颜色标识" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#404040;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="50" y="90" width="180" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="us1" value="US-001 登录功能" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="130" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="us2" value="US-002 注册功能" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="175" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="us3" value="US-003 密码重置" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="220" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="us4" value="US-004 第三方登录" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="265" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <!-- 进度条 -->
+        <mxCell id="progress_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="280" y="50" width="200" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="progress_bar" value="50%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#666666;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="280" y="50" width="100" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="progress_label" value="Epic 进度聚合" style="text;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="280" y="90" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Sprint 关联 -->
+        <mxCell id="sprint1" value="Sprint 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="300" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="sprint2" value="Sprint 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="400" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="sprint3" value="Sprint 3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="500" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <!-- 连接线 -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="us1" target="sprint1" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="us2" target="sprint1" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="us3" target="sprint2" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;dashed=1;" parent="1" source="us4" target="sprint3" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 说明文字 -->
+        <mxCell id="note" value="Epic 跨越多个 Sprint，&#xa;自动聚合关联用户故事的完成进度" style="text;html=1;align=left;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="300" y="220" width="280" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

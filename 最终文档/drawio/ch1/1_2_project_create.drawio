@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="项目创建与模板选择流程" id="project_create">
+    <mxGraphModel dx="1200" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="600">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="start" value="开始" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="choice" value="选择项目类型" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="160" y="140" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="start" target="choice" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="scrum" value="Scrum模式" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="320" y="60" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="Scrum" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="choice" target="scrum" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="kanban" value="Kanban模式" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="320" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="Kanban" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="choice" target="kanban" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="blank" value="空白项目" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="320" y="260" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="空白" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="choice" target="blank" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="info" value="填写项目信息&#xa;(名称/描述/可见性)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="480" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="scrum" target="info" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="kanban" target="info" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="blank" target="info" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="模板初始化&#xa;(状态/点数/角色)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="660" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="info" target="init" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="invite" value="邀请成员&#xa;(可选)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="840" y="145" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="init" target="invite" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="end" value="进入项目" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="150" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" parent="1" source="invite" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

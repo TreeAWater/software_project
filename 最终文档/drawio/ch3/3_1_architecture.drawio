@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="前后端分离架构图" id="frontend_backend">
+    <mxGraphModel dx="1100" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="700">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 前端层 -->
+        <mxCell id="fe_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="300" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe_title" value="前端 (taiga-front)" style="text;html=1;strokeColor=none;fillColor=#d0d0d0;align=center;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe1" value="AngularJS&#xa;1.5.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="90" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe2" value="CoffeeScript" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="150" y="90" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe3" value="SASS/CSS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="240" y="90" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe4" value="Gulp 构建" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="160" width="260" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe5" value="静态资源&#xa;(HTML/JS/CSS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="60" y="210" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe6" value="浏览器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="100" y="270" width="180" height="35" as="geometry"/>
+        </mxCell>
+        <!-- 后端层 -->
+        <mxCell id="be_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="420" y="40" width="300" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="be_title" value="后端 (taiga-back)" style="text;html=1;strokeColor=none;fillColor=#c8c8c8;align=center;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="50" width="280" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="be1" value="Django 3.2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="440" y="90" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="be2" value="DRF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="550" y="90" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="be3" value="Celery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="640" y="90" width="60" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="be4" value="RESTful API&#xa;/api/v1/*" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="440" y="160" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="be5" value="Gunicorn WSGI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="440" y="220" width="120" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="be6" value="Redis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="570" y="220" width="60" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="be7" value="Events" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="640" y="220" width="60" height="35" as="geometry"/>
+        </mxCell>
+        <!-- 数据层 -->
+        <mxCell id="db_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="800" y="40" width="200" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="db_title" value="数据层" style="text;html=1;strokeColor=none;fillColor=#b0b0b0;align=center;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="810" y="50" width="180" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="db1" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="850" y="90" width="100" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="db2" value="文件存储&#xa;(Media)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="830" y="180" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db3" value="缓存&#xa;(Redis)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="920" y="180" width="60" height="50" as="geometry"/>
+        </mxCell>
+        <!-- 通信箭头 -->
+        <mxCell id="a1" value="HTTP/HTTPS&#xa;JSON" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="180" as="sourcePoint"/>
+            <mxPoint x="420" y="180" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="SQL/ORM" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="130" as="sourcePoint"/>
+            <mxPoint x="800" y="130" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- 外部系统 -->
+        <mxCell id="ext" value="外部系统&#xa;GitHub/GitLab" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#909090;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="420" y="350" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="a3" value="Webhook" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="320" as="sourcePoint"/>
+            <mxPoint x="480" y="350" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

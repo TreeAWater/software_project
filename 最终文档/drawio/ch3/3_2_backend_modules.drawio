@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="后端Django模块依赖图" id="backend_modules">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 核心模块 -->
+        <mxCell id="taiga" value="taiga (核心)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#808080;strokeColor=#404040;fontColor=#ffffff;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <!-- 一级模块 -->
+        <mxCell id="auth" value="auth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="100" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="users" value="users" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="200" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="projects" value="projects" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a0a0a0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="300" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="base" value="base" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="400" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="permissions" value="permissions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="500" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="events" value="events" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="620" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="external" value="external_apps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="720" y="140" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="webhooks" value="webhooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="840" y="140" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <!-- projects 子模块 -->
+        <mxCell id="userstories" value="userstories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="80" y="260" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="tasks" value="tasks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="170" y="260" width="70" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="milestones" value="milestones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="250" y="260" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="issues" value="issues" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="340" y="260" width="70" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="epics" value="epics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="420" y="260" width="60" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="wiki" value="wiki" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="490" y="260" width="60" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="attachments" value="attachments" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="560" y="260" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="history" value="history" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="650" y="260" width="60" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="notifications" value="notifications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="720" y="260" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <!-- 依赖连线 -->
+        <mxCell id="c1" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="auth" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c2" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="users" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c3" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="projects" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c4" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="base" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c5" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="permissions" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c6" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="events" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c7" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="external" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c8" style="strokeColor=#666666;endArrow=classic;" parent="1" source="taiga" target="webhooks" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c9" style="strokeColor=#666666;endArrow=classic;" parent="1" source="projects" target="userstories" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c10" style="strokeColor=#666666;endArrow=classic;" parent="1" source="projects" target="tasks" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c11" style="strokeColor=#666666;endArrow=classic;" parent="1" source="projects" target="milestones" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c12" style="strokeColor=#666666;endArrow=classic;" parent="1" source="projects" target="issues" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c13" style="strokeColor=#666666;endArrow=classic;" parent="1" source="projects" target="epics" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c14" style="strokeColor=#666666;endArrow=classic;" parent="1" source="projects" target="wiki" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 横向依赖 -->
+        <mxCell id="c15" style="strokeColor=#666666;endArrow=classic;dashed=1;" parent="1" source="userstories" target="tasks" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c16" style="strokeColor=#666666;endArrow=classic;dashed=1;" parent="1" source="userstories" target="milestones" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

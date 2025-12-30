@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="全局E-R图" id="global_er">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 实体 -->
+        <mxCell id="user" value="User&#xa;用户" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="project" value="Project&#xa;项目" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="200" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="userstory" value="UserStory&#xa;用户故事" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="100" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task" value="Task&#xa;任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="100" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="milestone" value="Milestone&#xa;冲刺" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="200" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="issue" value="Issue&#xa;问题" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="300" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="epic" value="Epic&#xa;史诗" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="200" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="wiki" value="WikiPage&#xa;Wiki页面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="400" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="role" value="Role&#xa;角色" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="350" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="membership" value="Membership&#xa;成员关系" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="160" y="200" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <!-- 关系 -->
+        <mxCell id="r1" style="strokeColor=#666666;endArrow=none;" parent="1" source="user" target="membership" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1_label" value="n" style="text;align=center;" parent="r1" vertex="1" connectable="0">
+          <mxGeometry x="0.5" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" style="strokeColor=#666666;endArrow=none;" parent="1" source="membership" target="project" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" style="strokeColor=#666666;endArrow=none;" parent="1" source="membership" target="role" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4" value="包含" style="strokeColor=#666666;endArrow=none;" parent="1" source="project" target="userstory" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5" value="包含" style="strokeColor=#666666;endArrow=none;" parent="1" source="project" target="milestone" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r6" value="包含" style="strokeColor=#666666;endArrow=none;" parent="1" source="project" target="issue" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r7" value="包含" style="strokeColor=#666666;endArrow=none;" parent="1" source="project" target="wiki" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r8" value="分解为" style="strokeColor=#666666;endArrow=none;" parent="1" source="userstory" target="task" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r9" value="属于" style="strokeColor=#666666;endArrow=none;" parent="1" source="userstory" target="milestone" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r10" value="关联" style="strokeColor=#666666;endArrow=none;" parent="1" source="userstory" target="epic" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r11" value="包含" style="strokeColor=#666666;endArrow=none;" parent="1" source="project" target="epic" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 基数标注 -->
+        <mxCell id="c1" value="1" style="text;align=center;" parent="1" vertex="1">
+          <mxGeometry x="260" y="210" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="c2" value="n" style="text;align=center;" parent="1" vertex="1">
+          <mxGeometry x="400" y="110" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="c3" value="n" style="text;align=center;" parent="1" vertex="1">
+          <mxGeometry x="640" y="110" width="20" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

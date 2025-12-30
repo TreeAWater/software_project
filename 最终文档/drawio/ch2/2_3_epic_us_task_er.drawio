@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="史诗用户故事任务层级E-R图" id="epic_us_task_er">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="700">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Epic -->
+        <mxCell id="epic" value="Epic&#xa;史诗" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0b0b0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="250" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="epic_attr" value="id, ref&#xa;subject, description&#xa;color&#xa;status_id (FK)" style="text;align=left;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="100" y="320" width="120" height="70" as="geometry"/>
+        </mxCell>
+        <!-- UserStory -->
+        <mxCell id="userstory" value="UserStory&#xa;用户故事" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8c8c8;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="250" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="us_attr" value="id, ref&#xa;subject, description&#xa;backlog_order&#xa;sprint_order&#xa;kanban_order&#xa;milestone_id (FK)" style="text;align=left;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="380" y="320" width="120" height="100" as="geometry"/>
+        </mxCell>
+        <!-- Task -->
+        <mxCell id="task" value="Task&#xa;任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="250" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_attr" value="id, ref&#xa;subject, description&#xa;us_order&#xa;taskboard_order&#xa;user_story_id (FK)" style="text;align=left;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="660" y="320" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <!-- Milestone -->
+        <mxCell id="milestone" value="Milestone&#xa;冲刺" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d0d0d0;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="80" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <!-- 关系 -->
+        <mxCell id="rel1" value="关联&#xa;(n:m)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="250" y="260" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1" style="strokeColor=#666666;endArrow=none;" parent="1" source="epic" target="rel1" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" style="strokeColor=#666666;endArrow=none;" parent="1" source="rel1" target="userstory" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel2" value="分解&#xa;(1:n)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="540" y="260" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" style="strokeColor=#666666;endArrow=none;" parent="1" source="userstory" target="rel2" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4" style="strokeColor=#666666;endArrow=none;" parent="1" source="rel2" target="task" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel3" value="属于&#xa;(n:1)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="400" y="170" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5" style="strokeColor=#666666;endArrow=none;" parent="1" source="userstory" target="rel3" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r6" style="strokeColor=#666666;endArrow=none;" parent="1" source="rel3" target="milestone" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 聚合关系 -->
+        <mxCell id="related" value="RelatedUserStory&#xa;(关联表)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;fontStyle=0;fontColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="230" y="180" width="120" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
