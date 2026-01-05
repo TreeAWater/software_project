@@ -388,7 +388,7 @@ POST /api/v1/auth
 
 用户登录流程涉及前端、API 层和数据库的协作，通过 JWT Token 实现无状态认证。
 
-![用户登录序列图](drawio/sdd/3_5_1_login_sequence.png)
+![用户登录序列图](https://raw.githubusercontent.com/TreeAWater/software_project/main/drawio/sdd/3_5_1_login_sequence.png)
 
 **流程说明**：
 
@@ -402,7 +402,7 @@ POST /api/v1/auth
 
 Sprint 规划流程包括创建 Sprint、分配用户故事和查看燃尽图。
 
-![Sprint规划序列图](drawio/sdd/3_5_2_sprint_sequence.png)
+![Sprint规划序列图](https://raw.githubusercontent.com/TreeAWater/software_project/main/drawio/sdd/3_5_2_sprint_sequence.png)
 
 **流程说明**：
 
