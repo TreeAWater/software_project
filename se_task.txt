@@ -1,0 +1,20 @@
+1. Taiga, Tenzu(天図)的关系
+技术栈 Postgresql, Python Django, Angular, RESTful API
+kaleidos INC
+2024年4月，Taiga转给 Taiga Cloud Services (TCS) 版本Taiga6, SaaS, 收费，每月5欧
+开源版 https://github.com/taigaio 功能全，但是版本老旧，Django 3.2.25, Angular 1.5+CoffeeScript
+实在太旧了，在github上同时发布了一个 taiga-front-dist 
+我们将它部署在 taiga.etao.net 
+可以看到Scrum和Kanban功能
+API文档单独一个项目，网页简单 http://taiga.etao.net/api/v1/
+但是文档很详细 https://docs.taiga.io/api.html
+
+TaigaNext项目转给BIRU-Scop, 更名为Tenzu
+技术栈版本更新，Django升级到5.2 （最新，直到2025.12），Angular最新21
+但是功能简单，目前只有看板。
+我们将它部署在 se.etao.net  (1user/123123)
+API文档采用django-ninja，https://se.etao.net/api/v1/docs
+
+2. 我们的工作
+2.1 对比taiga和tenzu，综合taiga和tenzu的文档，完善详细设计。将taiga的后端功能迁移到tenzu，实现自己的前端
+2.2 架构升级，由monolith转为microservices, 应用Strangler Fig (绞杀榕)模式，领域驱动设计(DDD), 服务拆分(Service Decomposition)

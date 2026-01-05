@@ -22,18 +22,18 @@
 - [第 4 章 详细设计](#第-4-章-详细设计)
   - [4.1 用户认证与个人中心模块](#41-用户认证与个人中心模块)
   - [4.2 项目管理核心模块](#42-项目管理核心模块)
-  - [4.3 待办事项 (Backlog) 模块](#43-待办事项-backlog-模块)
-  - [4.4 冲刺 (Sprint) 管理模块](#44-冲刺-sprint-管理模块)
-  - [4.5 看板 (Kanban) 模块](#45-看板-kanban-模块)
-  - [4.6 史诗 (Epic) 管理模块](#46-史诗-epic-管理模块)
-  - [4.7 问题追踪 (Issue) 模块](#47-问题追踪-issue-模块)
-  - [4.8 Wiki 与知识库模块](#48-wiki-与知识库模块)
-  - [4.9 辅助功能模块](#49-辅助功能模块)
+  - [4.3 Backlog 与用户故事模块](#43-backlog-与用户故事模块)
+  - [4.4 Sprint 规划与管理模块](#44-sprint-规划与管理模块)
+  - [4.5 任务管理模块](#45-任务管理模块)
+  - [4.6 Kanban 看板模块](#46-kanban-看板模块)
+  - [4.7 史诗 (Epic) 管理模块](#47-史诗-epic-管理模块)
+  - [4.8 问题追踪与 Wiki 模块](#48-问题追踪与-wiki-模块)
+  - [4.9 统计报表与集成模块](#49-统计报表与集成模块)
 - [第 5 章 系统实现](#第-5-章-系统实现)
   - [5.1 开发平台和开发环境介绍](#51-开发平台和开发环境介绍)
-  - [5.2 核心编码与实现](#52-核心编码与实现)
-  - [5.3 各模块功能的实现](#53-各模块功能的实现)
-  - [5.4 关键算法与逻辑实现](#54-关键算法与逻辑实现)
+  - [5.2 核心编码实现](#52-核心编码实现)
+  - [5.3 各模块功能实现](#53-各模块功能实现)
+  - [5.4 关键算法实现](#54-关键算法实现)
 - [第 6 章 测试](#第-6-章-测试)
   - [6.1 软件测试目标](#61-软件测试目标)
   - [6.2 软件测试步骤](#62-软件测试步骤)
@@ -41,13 +41,12 @@
   - [6.4 测试用例与结果](#64-测试用例与结果)
 - [第 7 章 维护](#第-7-章-维护)
   - [7.1 系统维护过程](#71-系统维护过程)
-  - [7.2 系统维护策略](#72-系统维护策略)
 - [第 8 章 总结与体会](#第-8-章-总结与体会)
   - [8.1 总结](#81-总结)
   - [8.2 体会](#82-体会)
 - [第 9 章 附录](#第-9-章-附录)
   - [附录 A：核心数据库表 SQL 定义](#附录-a核心数据库表-sql-定义)
-  - [附录 B：API 接口文档概览](#附录-bapi-接口文档概览)
+  - [附录 B：API 接口概览](#附录-bapi-接口概览)
   - [附录 C：配置文件说明](#附录-c配置文件说明)
 
 ---
@@ -197,7 +196,7 @@ Taiga 系统采用现代化的前后端分离架构，技术选型如表 1.1 所
 3. **Token 刷新** (`/api/v1/auth/refresh`):
    - 使用 Refresh Token 获取新的 Access Token
 
-![用户注册与登录业务流程](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_1_auth_flow.png)
+![用户注册与登录业务流程](drawio/ch1/1_1_auth_flow.png)
 
 ##### (2) 项目创建与模板选择业务流程
 
@@ -216,7 +215,7 @@ Taiga 系统采用现代化的前后端分离架构，技术选型如表 1.1 所
    - 故事点定义 (`Points`)
    - 默认角色和权限 (`Roles`)
 
-![项目创建与模板选择流程](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_2_project_create.png)
+![项目创建与模板选择流程](drawio/ch1/1_2_project_create.png)
 
 ##### (3) Scrum 模式：Sprint 规划与燃尽图生成流程
 
@@ -235,7 +234,7 @@ Sprint 管理。
    - 进行相应处理
    - 若完成则进行相应处理
 
-![Sprint规划与燃尽图流程](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_3_sprint_flow.png)
+![Sprint规划与燃尽图流程](drawio/ch1/1_3_sprint_flow.png)
 
 ##### (4) Kanban 模式：任务卡片流转与泳道管理流程
 
@@ -251,7 +250,7 @@ Kanban 模式通过泳道 (Swimlane) 和状态列实现可视化管理，。
    - 支持 `before_userstory` / `after_userstory` 定位
 5. 状态变更时自动重新计算
 
-![Kanban任务卡片流转流程](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_4_kanban_flow.png)
+![Kanban任务卡片流转流程](drawio/ch1/1_4_kanban_flow.png)
 
 ##### (5) 用户故事 (User Story) 全生命周期管理流程
 
@@ -269,7 +268,7 @@ Kanban 模式通过泳道 (Swimlane) 和状态列实现可视化管理，。
 | Done           | 已完成           |
 | Blocked        | 阻塞中           |
 
-![用户故事生命周期流程](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_5_userstory_lifecycle.png)
+![用户故事生命周期流程](drawio/ch1/1_5_userstory_lifecycle.png)
 
 ##### (6) 问题 (Issue) 追踪与处理流程
 
@@ -284,7 +283,7 @@ Kanban 模式通过泳道 (Swimlane) 和状态列实现可视化管理，。
 5. 添加评论和附件
 6. 关闭问题
 
-![问题追踪与处理流程](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_6_issue_flow.png)
+![问题追踪与处理流程](drawio/ch1/1_6_issue_flow.png)
 
 ##### (7) 史诗 (Epic) 跨版本规划流程
 
@@ -297,7 +296,7 @@ Kanban 模式通过泳道 (Swimlane) 和状态列实现可视化管理，。
 3. 进度聚合：自动计算关联用户故事的完成百分比
 4. 跨版本追踪：Epic 可跨越多个 Sprint 周期
 
-![史诗跨版本规划流程](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_7_epic_flow.png)
+![史诗跨版本规划流程](drawio/ch1/1_7_epic_flow.png)
 
 ---
 
@@ -327,7 +326,7 @@ Kanban 模式通过泳道 (Swimlane) 和状态列实现可视化管理，。
 - Webhook 事件 → 系统
 - 数据读写 ↔ 项目数据库
 
-![顶层数据流图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_8_context_dfd.png)
+![顶层数据流图](drawio/ch1/1_8_context_dfd.png)
 
 ##### (2) 0 层数据流图 (Level-0 DFD)
 
@@ -346,7 +345,7 @@ Kanban 模式通过泳道 (Swimlane) 和状态列实现可视化管理，。
 - D6 问题表 (issues_issue)
 - D7 Wiki 表 (wiki_wikipage)
 
-![0层数据流图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_9_level0_dfd.png)
+![0层数据流图](drawio/ch1/1_9_level0_dfd.png)
 
 ##### (3) 1 层数据流图：敏捷管理子系统
 
@@ -365,7 +364,7 @@ Kanban 模式通过泳道 (Swimlane) 和状态列实现可视化管理，。
 - D8 泳道表 (projects_swimlane)
 - D9 统计数据 (计算生成)
 
-![1层数据流图-敏捷管理子系统](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch1/1_10_level1_agile_dfd.png)
+![1层数据流图-敏捷管理子系统](drawio/ch1/1_10_level1_agile_dfd.png)
 
 ---
 
@@ -828,7 +827,7 @@ Taiga 系统的主要目标包括：
 - UserStory → Task: 一对多分解关系
 - Epic ↔ UserStory: 多对多关联关系
 
-![全局E-R图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch2/2_1_global_er.png)
+![全局E-R图](drawio/ch2/2_1_global_er.png)
 
 #### 图 2.2 用户与项目成员关系局部 E-R 图
 
@@ -847,7 +846,7 @@ Taiga 系统的主要目标包括：
 - Project : Membership = 1 : n (一个项目可有多个成员)
 - Membership : Role = n : 1 (每个成员关系对应一个角色)
 
-![用户与项目成员关系E-R图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch2/2_2_user_project_er.png)
+![用户与项目成员关系E-R图](drawio/ch2/2_2_user_project_er.png)
 
 #### 图 2.3 史诗、用户故事与任务层级关系局部 E-R 图
 
@@ -868,7 +867,7 @@ Epic (史诗)
 - `milestone_id`: UserStory 所属的冲刺
 - `user_story_id`: Task 所属的用户故事
 
-![史诗用户故事任务层级E-R图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch2/2_3_epic_us_task_er.png)
+![史诗用户故事任务层级E-R图](drawio/ch2/2_3_epic_us_task_er.png)
 
 #### 图 2.4 看板、泳道与状态流转局部 E-R 图
 
@@ -885,7 +884,7 @@ Epic (史诗)
 - 全局 WIP: 在 `UserStoryStatus.wip_limit` 设置
 - 泳道 WIP: 在 `SwimlaneUserStoryStatus.wip_limit` 覆盖
 
-![看板泳道状态E-R图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch2/2_4_kanban_er.png)
+![看板泳道状态E-R图](drawio/ch2/2_4_kanban_er.png)
 
 #### 图 2.5 问题追踪与附件管理局部 E-R 图
 
@@ -904,7 +903,7 @@ Epic (史诗)
 - `Attachment.content_type` + `Attachment.object_id` 关联任意实体
 - 支持 UserStory、Task、Issue、WikiPage 等附件
 
-![问题追踪与附件E-R图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch2/2_5_issue_attachment_er.png)
+![问题追踪与附件E-R图](drawio/ch2/2_5_issue_attachment_er.png)
 
 ---
 
@@ -939,7 +938,7 @@ Epic (史诗)
 | 管理     | 系统配置、用户管理                                |
 | 集成     | 接收 Webhook                                      |
 
-![系统用例图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch2/2_6_use_case.png)
+![系统用例图](drawio/ch2/2_6_use_case.png)
 
 #### 图 2.7 功能层次图
 
@@ -989,7 +988,7 @@ Taiga 系统
     └── 数据导入
 ```
 
-![功能层次图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch2/2_7_function_hierarchy.png)
+![功能层次图](drawio/ch2/2_7_function_hierarchy.png)
 
 ---
 
@@ -1179,7 +1178,7 @@ Taiga 采用前后端分离的 SPA (Single Page Application) 架构。
 - 实时通信: WebSocket (taiga-events)
 - 外部集成: Webhook 回调
 
-![前后端分离架构图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch3/3_1_architecture.png)
+![前后端分离架构图](drawio/ch3/3_1_architecture.png)
 
 #### 图 3.2 后端 Django 应用模块依赖图
 
@@ -1203,7 +1202,7 @@ Taiga 采用前后端分离的 SPA (Single Page Application) 架构。
 - `epics`: 史诗管理
 - `wiki`: 知识库
 
-![后端模块依赖图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch3/3_2_backend_modules.png)
+![后端模块依赖图](drawio/ch3/3_2_backend_modules.png)
 
 #### 图 3.3 前端 AngularJS 模块依赖图
 
@@ -1228,7 +1227,7 @@ Taiga 采用前后端分离的 SPA (Single Page Application) 架构。
 - `taiga.resources`: API 资源定义
 - `taiga.events`: WebSocket 事件处理
 
-![前端模块依赖图](https://raw.githubusercontent.com/TreeAWater/software_project/main/%E6%9C%80%E7%BB%88%E6%96%87%E6%A1%A3/drawio/ch3/3_3_frontend_modules.png)
+![前端模块依赖图](drawio/ch3/3_3_frontend_modules.png)
 
 ---
 
@@ -1316,12 +1315,13 @@ IPO 表（输入-处理-输出表）是描述系统各模块功能的有效工�
 
 #### 3.3.1 用户注册与 JWT 认证模块
 
-| 项目       | 内容                                                                |
-| ---------- | ------------------------------------------------------------------- |
-| **模块名** | AuthViewSet                                                         |
-| **输入**   | username, email, password, accepted_terms                           |
-| **处理**   | 1. 验证用户名/邮箱唯一性<br>2. 密码加密存储<br>3. 生成 JWT Token 对 |
-| **输出**   | { access_token, refresh_token, user_info }                          |
+| 项目 | 内容 |
+
+| ------------ | ------------------------------------------------------------------- |
+| **模块名** | AuthViewSet |
+| **输入** | username, email, password, accepted_terms |
+| **处理** | 1. 验证用户名/邮箱唯一性<br>2. 密码加密存储<br>3. 生成 JWT Token 对 |
+| **输出** | { access_token, refresh_token, user_info } |
 
 #### 3.3.2 项目创建与模板初始化模块
 
